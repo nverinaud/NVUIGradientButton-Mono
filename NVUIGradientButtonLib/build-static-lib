@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xcodebuild -project "NVUIGradientButtonLib.xcodeproj" -sdk iphonesimulator -configuration Release clean build
+xcodebuild -project "NVUIGradientButtonLib.xcodeproj" -sdk iphoneos -configuration Release clean build
+lipo -create -output ./build/libNVUIGradientButton.a ./build/Release-iphoneos/libNVUIGradientButton.a ./build/Release-iphonesimulator/libNVUIGradientButton.a
