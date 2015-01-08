@@ -1,17 +1,17 @@
 ﻿//
 //  Author:
-//       Nicolas VERINAUD <nicolas@chloro.eu>
+//       Nicolas VERINAUD <n.verinaud@gmail.com>
 //
-//  Copyright (c) 2014 Chlorophyll Vision. All Rights Reserved.
+//  Copyright (c) 2014 Nicolas Verinaud. All Rights Reserved.
 //
 using System;
 
 namespace NV
 {
-	public enum NVUIGradientButtonStyle : uint {
+	public enum NVUIGradientButtonStyle : uint 
+	{
 		Default = 1,
 		BlackOpaque,
 		BlackTranslucent
 	}
 }
-

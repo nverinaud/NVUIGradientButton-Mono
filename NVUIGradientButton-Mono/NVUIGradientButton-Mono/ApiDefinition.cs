@@ -1,14 +1,14 @@
 ﻿//
 //  Author:
-//       Nicolas VERINAUD <nicolas@chloro.eu>
+//       Nicolas VERINAUD <n.verinaud@gmail.com>
 //
-//  Copyright (c) 2014 Chlorophyll Vision. All Rights Reserved.
+//  Copyright (c) 2014 Nicolas Verinaud. All Rights Reserved.
 //
 using System;
-using System.Drawing;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using ObjCRuntime;
+using UIKit;
 
 namespace NV 
 {
@@ -19,10 +19,10 @@ namespace NV
 		NVUIGradientButtonStyle Style { get; set; }
 
 		[Export ("cornerRadius"), Appearance]
-		float CornerRadius { get; set; }
+		nfloat CornerRadius { get; set; }
 
 		[Export ("borderWidth"), Appearance]
-		float BorderWidth { get; set; }
+		nfloat BorderWidth { get; set; }
 
 		[Export ("tintColor", ArgumentSemantic.Retain), Appearance, NullAllowed]
 		UIColor TintColor { get; set; }
@@ -70,10 +70,10 @@ namespace NV
 		UILabel TitleLabel { get; }
 
 		[Export ("gradientEnabled"), Appearance]
-		int GradientEnabled { [Bind ("isGradientEnabled")] get; set; }
+		nint GradientEnabled { [Bind ("isGradientEnabled")] get; set; }
 
 		[Export ("glossy"), Appearance]
-		int Glossy { [Bind ("isGlossy")] get; set; }
+		nint Glossy { [Bind ("isGlossy")] get; set; }
 
 		[Export ("rightAccessoryImage", ArgumentSemantic.Retain), Appearance, NullAllowed]
 		UIImage RightAccessoryImage { get; set; }
@@ -88,13 +88,13 @@ namespace NV
 		UIImage LeftHighlightedAccessoryImage { get; set; }
 
 		[Export ("initWithFrame:style:cornerRadius:borderWidth:andText:")]
-		IntPtr Constructor (RectangleF frame, NVUIGradientButtonStyle style, float cornerRadius, float borderWidth, string text);
+		IntPtr Constructor (CGRect frame, NVUIGradientButtonStyle style, nfloat cornerRadius, nfloat borderWidth, string text);
 
 		[Export ("initWithFrame:cornerRadius:borderWidth:andText:")]
-		IntPtr Constructor (RectangleF frame, float cornerRadius, float borderWidth, string text);
+		IntPtr Constructor (CGRect frame, nfloat cornerRadius, nfloat borderWidth, string text);
 
 		[Export ("initWithFrame:style:")]
-		IntPtr Constructor (RectangleF frame, NVUIGradientButtonStyle style);
+		IntPtr Constructor (CGRect frame, NVUIGradientButtonStyle style);
 
 		[Export ("setTintColor:forState:")]
 		void SetTintColor ([NullAllowed] UIColor tintColor, UIControlState state);
@@ -121,5 +121,3 @@ namespace NV
 		void SetLeftAccessoryImage ([NullAllowed] UIImage leftAccessoryImage, UIControlState state);
 	}
 }
-
-

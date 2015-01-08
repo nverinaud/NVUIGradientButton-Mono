@@ -8,9 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using NV;
+using CoreGraphics;
 
 namespace NVUIGradientButtonMonoSample
 {
@@ -22,6 +23,12 @@ namespace NVUIGradientButtonMonoSample
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow(UIScreen.MainScreen.Bounds);
+			window.BackgroundColor = UIColor.White;
+
+			var button = new NVUIGradientButton(new CGRect(20, 20, 280, 44), NVUIGradientButtonStyle.BlackTranslucent);
+			button.Text = "Hello Button";
+			window.AddSubview(button);
+
 			window.MakeKeyAndVisible();
 
 			return true;

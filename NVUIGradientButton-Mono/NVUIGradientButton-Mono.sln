@@ -18,7 +18,6 @@ Global
 		{43B3A58F-EC07-472A-AA47-EF898926F7CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = NVUIGradientButton-Mono\NVUIGradientButton-Mono.csproj
-		version = 1.6.1
+		version = 1.6.1.1
 	EndGlobalSection
 EndGlobal

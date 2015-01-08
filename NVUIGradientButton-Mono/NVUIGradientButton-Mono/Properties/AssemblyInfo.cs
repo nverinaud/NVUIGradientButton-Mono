@@ -10,5 +10,5 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("NVUIGradientButton")]
 [assembly: AssemblyCompany("Nicolas Verinaud")]
 [assembly: AssemblyCopyright("Nicolas Verinaud")]
-[assembly: AssemblyVersion("1.6.1")]
+[assembly: AssemblyVersion("1.6.1.1")]
 
